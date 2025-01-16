@@ -58,4 +58,9 @@ app.use("/api/shop/review", shopReviewRouter);
 
 app.use("/api/common/feature", commonFeatureRouter);
 
+// Route to confirm the backend is running
+app.get('/', (req, res) => {
+  res.send('<h1>🚀 Backend is running successfully!</h1><p>🌐 Access other routes as needed.</p>');
+});
+
 app.listen(PORT, () => console.log(`Server is now running on port ${PORT}`));
